@@ -108,11 +108,11 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         };
-        if (sp.getBoolean("AUTO_ISCHECK",false)){
+        if (sp.getBoolean("auto",false)){
             TestLogin(sp.getString("user_mail",""),sp.getString("user_password",""));
             return;
         }
-        if (sp.getBoolean("ISCHECK", false)) {
+        if (sp.getBoolean("ischeck", false)) {
             username.setText(sp.getString("user_mail", ""));
             userpassword.setText(sp.getString("user_password", ""));
             remember.setChecked(true);
@@ -126,10 +126,11 @@ public class LoginActivity extends AppCompatActivity {
         remember.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (remember.isChecked()) {
-                    sp.edit().putBoolean("ISCHECK", true).commit();
+                if (b) {
+                    sp.edit().putBoolean("ischeck", true).commit();
                 } else {
-                    sp.edit().putBoolean("ISCHECK", false).commit();
+                    sp.edit().putBoolean("ischeck", false).commit();
+                    auto.setChecked(false);
                 }
             }
         });
@@ -137,10 +138,14 @@ public class LoginActivity extends AppCompatActivity {
         auto.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(auto.isChecked()){
-                    sp.edit().putBoolean("AUTO_ISCHECK", true).commit();
-                    sp.edit().putBoolean("ISCHECK", false).commit();
+                if(isChecked){
+                    sp.edit().putBoolean("auto", true).commit();
+                    sp.edit().putBoolean("ischeck", true).commit();
                     remember.setChecked(true);
+                }else{
+                    sp.edit().putBoolean("auto", false).commit();
+                    sp.edit().putBoolean("ischeck", false).commit();
+                    remember.setChecked(false);
                 }
             }
         });

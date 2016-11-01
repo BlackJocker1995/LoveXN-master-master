@@ -180,10 +180,10 @@ public class TiebaAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         if (biaozhi == 0) {
             if (position == 0) {
                 ((ContentViewHolder) holder).reply.setText(tie_text);
-                ((ContentViewHolder) holder).reply.setTextSize(16);
+                ((ContentViewHolder) holder).reply.setTextSize(30);
             } else if (position == 1) {
                 ((ContentViewHolder) holder).reply.setText(content+"\n");
-                ((ContentViewHolder) holder).reply.setTextSize(14);
+                ((ContentViewHolder) holder).reply.setTextSize(20);
             }  else {
                 ((ContentViewHolder) holder).reply.setText(info.get(position - 2).getUser_name() + ": " + info.get(position - 2).getComment_content());//reply_text[position - 2]
             }
@@ -191,10 +191,10 @@ public class TiebaAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         }else{
             if (position == 0) {
                 ((ContentViewHolder) holder).reply.setText(tie_text);
-                ((ContentViewHolder) holder).reply.setTextSize(16);
+                ((ContentViewHolder) holder).reply.setTextSize(30);
             } else if (position == 1) {
                 ((ContentViewHolder) holder).reply.setText(content);
-                ((ContentViewHolder) holder).reply.setTextSize(14);
+                ((ContentViewHolder) holder).reply.setTextSize(20);
             } else if (position == 2) {
                 if (biaozhi == 1) {
                     ((ContentViewHolder) holder).reply.setBackground(drawable1);

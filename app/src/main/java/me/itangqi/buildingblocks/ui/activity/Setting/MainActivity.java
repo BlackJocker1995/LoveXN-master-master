@@ -239,7 +239,7 @@ public class MainActivity extends BaseActivity {
     //注销
     private void Logout() {
        SharedPreferences.Editor editer = sh.edit();
-        editer.putBoolean("AUTO_ISCHECK",false);//忘记密码
+        editer.putBoolean("auto",false);//忘记密码
         editer.putString("user_password","");
         editer.commit();
 
