@@ -63,8 +63,6 @@
                     android:textCursorDrawable="@drawable/bg_input_cursor"
                     android:paddingBottom="2dp"
                     />
-
-
             </android.support.design.widget.TextInputLayout>
         </LinearLayout>
 

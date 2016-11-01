@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -65,10 +66,9 @@ public class TiebaActivity extends SwipeBackActivity {
                 proDialog.dismiss();
                 initComment();
                 proDialog.dismiss();
-                //Toast.makeText(TiebaActivity.this, "回复成功", Toast.LENGTH_SHORT).show();
-
+                Snackbar.make(mSwipeBackLayout,"回复成功",Snackbar.LENGTH_SHORT).show();
             }else{
-                Toast.makeText(TiebaActivity.this, "网络错误", Toast.LENGTH_SHORT).show();
+                Snackbar.make(mSwipeBackLayout,"网络错误",Snackbar.LENGTH_SHORT).show();
                 proDialog.dismiss();
             }
         }

@@ -158,11 +158,6 @@ public class TiebaAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             info.add(jsonObjects.get(i));
         }
         notifyDataSetChanged();
-//        for (Comment infoitem : jsonObjects)
-//        {
-//            info.add(0,infoitem);
-//        }
-
     }
 
     //内容 ViewHolder
@@ -185,18 +180,21 @@ public class TiebaAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         if (biaozhi == 0) {
             if (position == 0) {
                 ((ContentViewHolder) holder).reply.setText(tie_text);
+                ((ContentViewHolder) holder).reply.setTextSize(16);
             } else if (position == 1) {
-                ((ContentViewHolder) holder).reply.setText(content);
+                ((ContentViewHolder) holder).reply.setText(content+"\n");
+                ((ContentViewHolder) holder).reply.setTextSize(14);
             }  else {
                 ((ContentViewHolder) holder).reply.setText(info.get(position - 2).getUser_name() + ": " + info.get(position - 2).getComment_content());//reply_text[position - 2]
             }
-
             return;
         }else{
             if (position == 0) {
                 ((ContentViewHolder) holder).reply.setText(tie_text);
+                ((ContentViewHolder) holder).reply.setTextSize(16);
             } else if (position == 1) {
                 ((ContentViewHolder) holder).reply.setText(content);
+                ((ContentViewHolder) holder).reply.setTextSize(14);
             } else if (position == 2) {
                 if (biaozhi == 1) {
                     ((ContentViewHolder) holder).reply.setBackground(drawable1);

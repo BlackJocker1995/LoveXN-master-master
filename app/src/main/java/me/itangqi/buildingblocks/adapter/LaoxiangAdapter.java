@@ -161,13 +161,6 @@ public class LaoxiangAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         for(int i=info.size();i<jsonObjects.size();i++){
             info.add(jsonObjects.get(i));
         }
-
-
-//        for (Comment infoitem : jsonObjects)
-//        {
-//            info.add(infoitem);
-//        }
-//
         notifyDataSetChanged();
     }
 
@@ -191,25 +184,26 @@ public class LaoxiangAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         if (biaozhi == 0) {
             if (position == 0) {
                 ((ContentViewHolder) holder).reply.setText(tie_text);
+                ((ContentViewHolder) holder).reply.setTextSize(16);
             } else if (position == 1) {
-                        ((ContentViewHolder) holder).reply.setText(content);
+                ((ContentViewHolder) holder).reply.setText(content);
+                ((ContentViewHolder) holder).reply.setTextSize(14);
             }  else {
                 ((ContentViewHolder) holder).reply.setText(info.get(position - 2).getUser_name() + ": " + info.get(position - 2).getComment_content());//reply_text[position - 2]
             }
         }else{
             if (position == 0) {
                 ((ContentViewHolder) holder).reply.setText(tie_text);
+                ((ContentViewHolder) holder).reply.setTextSize(16);
             } else if (position == 1) {
                 ((ContentViewHolder) holder).reply.setText(content);
-
+                ((ContentViewHolder) holder).reply.setTextSize(14);
             } else if (position == 2) {
 
                 if (biaozhi == 1) {
                     ((ContentViewHolder) holder).reply.setBackground(drawable1);
-
                 } else if(biaozhi==2){
                     ((ContentViewHolder) holder).reply.setBackground(drawable2);
-
                 }
             } else {
                 ((ContentViewHolder) holder).reply.setText(info.get(position - 3).getUser_name() + ": " + info.get(position - 3).getComment_content());//reply_text[position - 2]
@@ -224,7 +218,4 @@ public class LaoxiangAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         }
     return info.size()+3;
 }
-
-
-
 }
