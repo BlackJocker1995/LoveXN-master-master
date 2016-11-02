@@ -53,18 +53,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:paddingTop="8dp">
-
+                android:orientation="vertical">
                 <!--卡片布局-->
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/card_margin"
                     >
-
                     <LinearLayout
-
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
@@ -76,9 +72,7 @@
                             android:layout_marginRight="5dp"
                             android:textSize="96px"
                             android:textStyle="bold"
-
                             />
-
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
@@ -87,16 +81,12 @@
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/card_margin"
+
                     >
-
                     <LinearLayout
-
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-
-
                         <TextView
                             android:id="@+id/newsactivity_news_notice_content"
                             android:layout_width="match_parent"
@@ -112,14 +102,4 @@
             </LinearLayout>
 
         </android.support.v4.widget.NestedScrollView>
-
-        <!--第三部分：漂浮按钮
-        <android.support.design.widget.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/fab_margin"
-            android:clickable="true"
-            android:src="@drawable/ic_discuss"
-            app:layout_anchor="@id/appbar"
-            app:layout_anchorGravity="bottom|right|end" />-->
     </android.support.design.widget.CoordinatorLayout>

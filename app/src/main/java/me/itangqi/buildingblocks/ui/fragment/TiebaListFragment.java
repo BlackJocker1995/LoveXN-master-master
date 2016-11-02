@@ -116,6 +116,4 @@ public class TiebaListFragment extends Fragment implements SwipeRefreshLayout.On
         super.onDestroyView();
         ButterKnife.unbind(this);
     }
-
-
 }

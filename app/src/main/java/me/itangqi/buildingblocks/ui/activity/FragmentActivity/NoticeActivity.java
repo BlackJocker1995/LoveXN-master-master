@@ -43,6 +43,7 @@ public class NoticeActivity extends AppCompatActivity implements SwipeBackActivi
         text_content= (TextView) findViewById(R.id.newsactivity_news_notice_content);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("");
         mSwipeBackLayout = new SwipeBackActivityHelper(this);
         mSwipeBackLayout.onActivityCreate();
         setNews();
