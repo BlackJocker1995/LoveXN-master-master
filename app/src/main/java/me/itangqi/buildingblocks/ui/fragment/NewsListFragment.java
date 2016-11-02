@@ -83,7 +83,6 @@ public class NewsListFragment extends Fragment implements SwipeRefreshLayout.OnR
                 swipe_refresh_layout.setRefreshing(false);
                 Log.i("tiebalist", "" + url);
             }else if (url.contains("100009")){
-                Toast.makeText(getActivity(), "当前已是最新", Toast.LENGTH_SHORT).show();
                 swipe_refresh_layout.setRefreshing(false);
             }
             else{

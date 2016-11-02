@@ -162,11 +162,6 @@ public class TiebaActivity extends SwipeBackActivity {
         createProgressBar();
     }
 
-
-    private void Flash() {
-        initComment();
-    }
-
     private void CreateDialog(){
         builder = new AlertDialog.Builder(TiebaActivity.this);
         builder.setTitle("回复楼主");
