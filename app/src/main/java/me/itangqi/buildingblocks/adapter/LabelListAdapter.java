@@ -15,8 +15,6 @@ public class LabelListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     private List<String> mNewsList;
     private Context mContext;
     private LayoutInflater mLayoutInflater;
-    private static final int ITEM_TYPE_IMAGE = 1;
-    private static final int ITEM_TYPE_TEXT = 2;
 
     //初始化Adapter
     public LabelListAdapter(Context mContext, List<String> mNewsList) {

@@ -93,8 +93,6 @@ public class NewsListFragment extends Fragment implements SwipeRefreshLayout.OnR
         }
     };
 
-//    MyHandler mhandler=new MyHandler();
-
     @Override
     public void onRefresh() {
 

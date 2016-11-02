@@ -215,8 +215,9 @@ public class ReleaseActivity extends BaseActivity {
                     return;
                 }
 
+
                 String biaoti = et_biaoti.getText().toString();
-                String neirong = et_neirong.getText().toString();
+                String neirong = et_neirong.getText().toString().replace(" ","\n\t");
                 id = sh.getInt("user_id", 0);
                 Map map = new HashMap();
 
@@ -273,17 +274,8 @@ public class ReleaseActivity extends BaseActivity {
                     }
                 };
                 thread.start();
-
             }
-
-
-
-
-
-
         });
-
-
 
          /*下拉菜单弹出的内容选项触屏事件处理*/
         spinner.setOnTouchListener(new Spinner.OnTouchListener() {

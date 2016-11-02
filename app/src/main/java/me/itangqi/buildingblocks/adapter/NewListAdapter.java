@@ -25,35 +25,25 @@ import me.itangqi.buildingblocks.ui.activity.FragmentActivity.NoticeActivity;
  * Created by rain on 2016/4/13.
  */
 public class NewListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-    public static final int ITEM_TYPE_CONTEN0 = 1;
-    public  static  final  String URL = "";
+
     ArrayList<NewsInfo> info=new ArrayList<NewsInfo>();
     public String [] title;
-    public String [] news_text;
-    public String [] image_url;
-    public JSONObject json;
-    public Pair[] pairs;
-
     private LayoutInflater mLayoutInflater;
     private Context mContext;
-    private Integer minID;
+
     public NewListAdapter(Context context) {
         mContext = context;
         mLayoutInflater = LayoutInflater.from(context);
     }
 
-
-
     public void network(String url) {
         Type type = new TypeToken<ArrayList<NewsInfo>>() {}.getType();
         ArrayList<NewsInfo> jsonObjects = new Gson().fromJson(url, type);
-
         for (NewsInfo infoitem : jsonObjects)
         {
             info.add(0,infoitem);
         }
     }
-
     public int returnID() {
 
         if(info.isEmpty())
@@ -65,19 +55,12 @@ public class NewListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         }
     }
 
-
-
     //内容长度
     public int getContentItemCount(){
         return info.size();//得到item长度
     }
     //判断当前item是否是HeadView
 
-    //判断当前item类型
-    @Override
-    public int getItemViewType(int position) {
-        return ITEM_TYPE_CONTEN0;
-    }
     //内容 ViewHolder
     public static class ContentViewHolder extends RecyclerView.ViewHolder {
         // @Bind(R.id.coordinatorLayout) CoordinatorLayout mContainer;

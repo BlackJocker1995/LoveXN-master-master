@@ -112,8 +112,7 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 //发帖
-                Intent intent = new Intent(MainActivity.this, ReleaseActivity.class);
-                startActivity(intent);
+                prepareIntent(ReleaseActivity.class);
             }
         });
 
@@ -221,16 +220,11 @@ public class MainActivity extends BaseActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.men_action_refresh:
-                Snackbar.make(mContainer, R.string.snack_rest_over_to_you, Snackbar.LENGTH_SHORT).show();
-                return true;
-            case R.id.men_action_read_mode:
-                Snackbar.make(mContainer, R.string.snack_rest_over_to_you, Snackbar.LENGTH_SHORT).show();
-                return true;
             case R.id.menu_action_feedback:
                 Logout();
                 return true;
             case  R.id.menu_action_send:
+                prepareIntent(ReleaseActivity.class);
                 return true;
             default:
         }
