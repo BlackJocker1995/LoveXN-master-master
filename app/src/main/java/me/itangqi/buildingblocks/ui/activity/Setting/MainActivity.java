@@ -163,6 +163,8 @@ public class MainActivity extends BaseActivity {
                         //选中后关闭侧滑界面
                         mDrawerLayout.closeDrawers();
                         switch (menuItem.getItemId()) {
+                            case R.id.nav_mess:
+                                return prepareIntent(OwnMessActivity.class);
                             case R.id.nav_settings:
                                 return prepareIntent(PrefsActivity.class);
                             case R.id.nav_about:

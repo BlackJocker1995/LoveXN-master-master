@@ -94,7 +94,6 @@ public class LoginActivity extends AppCompatActivity {
                         sp.edit().putInt("user_type", userinfo.getUser_type()).commit();
                         sp.edit().putInt("user_id", userinfo.getUser_id()).commit();
                     finish();
-
                 }else{
                     if(test.contains("100005")){
                         Toast.makeText(LoginActivity.this, "该用户未注册", Toast.LENGTH_SHORT).show();
@@ -109,13 +108,17 @@ public class LoginActivity extends AppCompatActivity {
             }
         };
         if (sp.getBoolean("auto",false)){
-            TestLogin(sp.getString("user_mail",""),sp.getString("user_password",""));
-            return;
+            stUserName = sp.getString("user_mail","");
+            stPassWord = sp.getString("user_password","");
+            TestLogin(stUserName,stPassWord);
+            remember.setChecked(true);
+            auto.setChecked(true);
         }
-        if (sp.getBoolean("ischeck", false)) {
+        else if (sp.getBoolean("ischeck", false)) {
             username.setText(sp.getString("user_mail", ""));
             userpassword.setText(sp.getString("user_password", ""));
             remember.setChecked(true);
+            auto.setChecked(false);
         } else {
             username.setText(sp.getString("user_mail", ""));
             userpassword.setText("");

@@ -128,8 +128,6 @@ public class TiebaActivity extends SwipeBackActivity {
                 adapter.network(test);
                 adapter.notifyDataSetChanged();
                 proDialog.dismiss();
-
-
             }else if(test.contains("100008")){
                 proDialog.dismiss();
             }else{

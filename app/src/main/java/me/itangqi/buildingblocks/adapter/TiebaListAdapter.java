@@ -64,8 +64,6 @@ public class TiebaListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         }
     }
 
-
-
     //判断当前item类型
     @Override
     public int getItemViewType(int position) {
@@ -73,7 +71,6 @@ public class TiebaListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     }
 
     public int returnID() {
-
         if(info.isEmpty())
         {
             return -1;

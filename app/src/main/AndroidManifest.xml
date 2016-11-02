@@ -121,6 +121,7 @@
         <activity android:name=".ui.activity.FragmentActivity.NoticeActivity"/>
         <activity android:name=".ui.activity.OtherActivity.Com_Activity"/>
         <activity android:name=".ui.activity.OtherActivity.School_Activity"/>
+        <activity android:name=".ui.activity.Setting.OwnMessActivity"/>
         <activity android:name=".ui.activity.OtherActivity.Shop_Activity"/>
         <activity android:name=".ui.activity.OtherActivity.Tea_Activity"/>
         <activity android:name=".ui.activity.loginAndRegister.LoginActivity"/>
